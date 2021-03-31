@@ -60,6 +60,9 @@ const useStyles = makeStyles((theme) => ({
   headerFirst: {
     color: '#fff',
     margin: "1.5rem 0",
+    letterSpacing: '3px',
+    fontSize: '4rem',
+    fontWeight: 700,
     [theme.breakpoints.down('md')]: {
 
       fontSize: '3.75rem'
@@ -70,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   headerTogo: {
-    fontFamily: 'Imprima',
+    fontFamily: 'Nunito',
     letterSpacing: '3px',
     fontSize: '2.5rem',
     fontWeight: 700,
@@ -254,10 +257,13 @@ const handleTooltipOpen3 = () => {
       <Box className={classes.hero}>
         <Box m={2} textAlign="center">
           {/* <Jumbotron text={['Keenok Thai', 'To-Go']} className={classes.headerText} /> */}
-          <Typography variant='h1' className={classes.headerFirst}>Keenok Thai</Typography>
+          <Typography variant='h5' className={classes.headerFirst}>Keenok Thai</Typography>
           <Typography className={classes.headerTogo}>To Go</Typography>
           <Typography variant='subtitle1' className={classes.headerText}>อาหารไทยแบบไทยๆ</Typography>
-          <Button variant="outlined" className={classNames(classes.btn, classes.link)} component={Link} to='/menu'>Order Now</Button>
+          <Button variant="outlined" className={classNames(classes.btn, classes.link)}  component={'a'}
+          href="https://keenokthai.netlify.app/index.html"
+          target='_blank'
+          rel="noopener noreferrer">Pop Up</Button>
         </Box>
       </Box>
 
